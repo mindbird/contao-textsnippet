@@ -20,7 +20,7 @@ class Textsnippet extends \Frontend {
         }
 
         if (isset($arrSplit[1])) {
-            $objTextsnippet = $this->getTextsnippet($arrSplit[2]);
+            $objTextsnippet = $this->getTextsnippet($arrSplit[1]);
             return $objTextsnippet->text;
         }
     }
@@ -33,4 +33,5 @@ class Textsnippet extends \Frontend {
             return;
         }
     }
+
 }
