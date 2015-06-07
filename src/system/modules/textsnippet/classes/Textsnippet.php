@@ -41,7 +41,7 @@ class Textsnippet extends \Frontend {
         if ($objTextsnippet) {
             return $objTextsnippet;
         } else {
-            throw new \Exception('Textschnipsel ist nicht vorhanden');
+            return;
         }
     }
 }
