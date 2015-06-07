@@ -19,21 +19,10 @@ class Textsnippet extends \Frontend {
             return false;
         }
 
-        if (isset($arrSplit[1]) && isset($arrSplit[2])) {
-            $this->checkArchiveByIdentifier($arrSplit[1]);
+        if (isset($arrSplit[1])) {
             $objTextsnippet = $this->getTextsnippet($arrSplit[2]);
             return $objTextsnippet->text;
         }
-    }
-
-    protected function checkArchiveByIdentifier($strIdentifier) {
-        $objArchiveModel = \TextsnippetArchiveModel::findBy('identifier', $strIdentifier);
-        if ($objArchiveModel) {
-            return $objArchiveModel;
-        } else {
-            throw new \Exception('Archiv ist nicht vorhanden');
-        }
-
     }
 
     protected function getTextsnippet($intId) {

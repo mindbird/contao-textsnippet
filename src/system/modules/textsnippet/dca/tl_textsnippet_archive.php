@@ -11,8 +11,7 @@ $GLOBALS ['TL_DCA'] ['tl_textsnippet_archive'] = array (
         'ctable' => array('tl_textsnippet'),
         'sql' => array (
             'keys' => array (
-                'id' => 'primary',
-                'identifier' => 'unique'
+                'id' => 'primary'
             )
         )
     ),
@@ -68,7 +67,7 @@ $GLOBALS ['TL_DCA'] ['tl_textsnippet_archive'] = array (
 
     // Palettes
     'palettes' => array (
-        'default' => '{title_legend},title,identifier'
+        'default' => '{title_legend},title'
     ),
     // Fields
     'fields' => array (
@@ -88,18 +87,6 @@ $GLOBALS ['TL_DCA'] ['tl_textsnippet_archive'] = array (
                 'maxlength' => 255
             ),
             'sql' => "varchar(255) NOT NULL default ''"
-        ),
-        'identifier' => array (
-            'label' => &$GLOBALS ['TL_LANG'] ['tl_textsnippet_archive'] ['identifier'],
-            'exclude' => true,
-            'search' => true,
-            'inputType' => 'text',
-            'eval' => array (
-                'mandatory' => true,
-                'maxlength' => 5,
-                'unique' => true
-            ),
-            'sql' => "varchar(5) NOT NULL default ''"
         )
     )
 );

@@ -30,10 +30,9 @@ $GLOBALS ['TL_DCA'] ['tl_textsnippet'] = array (
         'label' => array (
             'fields' => array (
                 'title',
-                'pid:tl_textsnippet_archive.identifier',
                 'id'
             ),
-            'format' => '%s<br>{{textsnippet::%s::%s}}'
+            'format' => '%s<br>{{textsnippet::%s}}'
         ),
         'global_operations' => array (
             'all' => array (
