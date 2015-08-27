@@ -21,7 +21,8 @@ class Textsnippet extends \Frontend {
 
         if (isset($arrSplit[1])) {
             $objTextsnippet = $this->getTextsnippet($arrSplit[1]);
-            return $objTextsnippet->text;
+
+            return \StringUtil::toHtml5($objTextsnippet->text);
         }
     }
 
