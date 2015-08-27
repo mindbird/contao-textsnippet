@@ -22,7 +22,7 @@ class Textsnippet extends \Frontend {
         if (isset($arrSplit[1])) {
             $objTextsnippet = $this->getTextsnippet($arrSplit[1]);
 
-            return \StringUtil::toHtml5($objTextsnippet->text);
+            return \StringUtil::toHtml5($this->replaceInsertTag($objTextsnippet->text, true));
         }
     }
 
