@@ -8,4 +8,7 @@ $GLOBALS ['BE_MOD'] ['content'] ['textsnippet'] = array(
     'icon' => 'system/modules/textsnippet/assets/images/icon.png'
 );
 
-$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('Textsnippet\Textsnippet', 'replaceInsertTag');
+$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array(
+    'Mindbird\Textsnippet\Modules\Textsnippet',
+    'replaceInsertTag'
+);

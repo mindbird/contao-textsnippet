@@ -18,7 +18,7 @@
   "extra": {
     "contao": {
       "sources": {
-        "src/system/modules/textsnippet": "system/modules/textsnippet"
+        "contao": "system/modules/textsnippet"
       }
     }
   }
