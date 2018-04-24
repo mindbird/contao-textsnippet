@@ -9,6 +9,6 @@ $GLOBALS ['BE_MOD'] ['content'] ['textsnippet'] = array(
 );
 
 $GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array(
-    'Mindbird\Textsnippet\Modules\Textsnippet',
+    'Mindbird\Contao\Textsnippet\Modules\Textsnippet',
     'replaceInsertTag'
 );

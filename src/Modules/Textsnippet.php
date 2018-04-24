@@ -6,26 +6,36 @@ use Contao\Frontend;
 use Contao\StringUtil;
 use Mindbird\Contao\Textsnippet\Models\TextsnippetModel;
 
+/**
+ * Class Textsnippet
+ * @package Mindbird\Contao\Textsnippet\Modules
+ */
 class Textsnippet extends Frontend
 {
+    /**
+     * ReplaceInsertTag hook
+     * @param string $insertTag
+     * @return bool|string
+     */
     public function replaceInsertTag($insertTag)
     {
-        $insertTag = explode('::', $insertTag);
+        $tagElements = explode('::', $insertTag);
 
-        if ($insertTag[0] !== 'textsnippet') {
+        if ($tagElements[0] !== 'textsnippet') {
             return false;
         }
 
-        if (isset($insertTag[1])) {
-            $snippet = $this->getTextsnippet($insertTag[1]);
-
-            return StringUtil::toHtml5($this->replaceInsertTag($snippet->text, true));
-        }
+        return StringUtil::toHtml5($this->getTextsnippet($tagElements[1]));
     }
 
-    protected function getTextsnippet($intId)
+    /**
+     * Load snippet from db
+     * @param int $id
+     * @return bool|TextsnippetModel
+     */
+    protected function getTextsnippet($id)
     {
-        $snippet = TextsnippetModel::findByPk($intId);
+        $snippet = TextsnippetModel::findByPk($id);
         if ($snippet) {
             return $snippet;
         }
