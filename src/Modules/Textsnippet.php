@@ -1,13 +1,13 @@
 <?php
 
-namespace Mindbird\Textsnippet\Modules;
+namespace Mindbird\Contao\Textsnippet\Modules;
 
+use Contao\Frontend;
 use Contao\StringUtil;
-use Mindbird\Textsnippet\Models\TextsnippetModel;
+use Mindbird\Contao\Textsnippet\Models\TextsnippetModel;
 
-class Textsnippet extends \Frontend
+class Textsnippet extends Frontend
 {
-
     public function replaceInsertTag($insertTag)
     {
         $insertTag = explode('::', $insertTag);

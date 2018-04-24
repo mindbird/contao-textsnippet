@@ -1,6 +1,6 @@
 <?php
 
-namespace Mindbird\Textsnippet\Models;
+namespace Mindbird\Contao\Textsnippet\Models;
 
 
 use Contao\Model;
