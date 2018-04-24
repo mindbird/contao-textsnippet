@@ -31,13 +31,13 @@ class Textsnippet extends Frontend
     /**
      * Load snippet from db
      * @param int $id
-     * @return bool|Models\Textsnippet
+     * @return bool|string
      */
     protected function getTextsnippet($id)
     {
         $snippet = Models\Textsnippet::findByPk($id);
         if ($snippet) {
-            return $snippet;
+            return $snippet->text;
         }
 
         return false;
