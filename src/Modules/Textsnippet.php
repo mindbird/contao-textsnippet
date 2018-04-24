@@ -4,7 +4,7 @@ namespace Mindbird\Contao\Textsnippet\Modules;
 
 use Contao\Frontend;
 use Contao\StringUtil;
-use Mindbird\Contao\Textsnippet\Models\TextsnippetModel;
+use Mindbird\Contao\Textsnippet\Models;
 
 /**
  * Class Textsnippet
@@ -31,11 +31,11 @@ class Textsnippet extends Frontend
     /**
      * Load snippet from db
      * @param int $id
-     * @return bool|TextsnippetModel
+     * @return bool|Models\Textsnippet
      */
     protected function getTextsnippet($id)
     {
-        $snippet = TextsnippetModel::findByPk($id);
+        $snippet = Models\Textsnippet::findByPk($id);
         if ($snippet) {
             return $snippet;
         }

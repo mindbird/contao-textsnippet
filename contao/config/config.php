@@ -12,3 +12,8 @@ $GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array(
     'Mindbird\Contao\Textsnippet\Modules\Textsnippet',
     'replaceInsertTag'
 );
+
+$GLOBALS['TL_MODELS'] = array(
+    'tl_textsnippet' => 'Mindbird\Contao\Textsnippet\Models\Textsnippet',
+    'tl_textsnippet_archive' => 'Mindbird\Contao\Textsnippet\Models\TextsnippetArchive'
+);
